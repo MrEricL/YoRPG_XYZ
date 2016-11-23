@@ -1,7 +1,7 @@
 //Team name: XYZ (Melanie Chow, Eric Li, Iris Tao)
 //APCS1 Period 4
-//HW #32: Ye Olde Role Playing Game, Expanded
-//2016-11-21
+//HW #34: Ye Olde Role Playing Game, Unchained
+//2016-11-23
 
 public class Rogue extends Character{
     //String about="Rogue: Steally stabby";
