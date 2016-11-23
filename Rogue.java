@@ -3,24 +3,24 @@
 //HW #32: Ye Olde Role Playing Game, Expanded
 //2016-11-21
 
-public class Warrior extends Character{
-    //String about="Warrior: Physical knight";
+public class Rogue extends Character{
+    //String about="Rogue: Steally stabby";
 	
 	// ~~~~~~~~~~~ INSTANCE VARIABLES ~~~~~~~~~~~
     protected String name;
  
 	
 	// ~~~~~~~~~~ DEFAULT CONSTRUCTOR ~~~~~~~~~~~
-    public Warrior(){
+    public Rogue(){
 	name="player";
-	HP=100;
-	strength=100;
-	defense=40;
-	attack=.5;
+	HP=50;
+	strength=150;
+	defense=75;
+	attack=1.25;
     }
 	
 	// ~~~~~~~~~~ OVERLOADED CONSTRUCTOR ~~~~~~~~~~~
-    public Warrior(String n){
+    public Rogue(String n){
 	//this() invokes the default constructor to initialize other attributes (HP, strength, etc)
 	this(); 
 	name=n;
@@ -30,7 +30,12 @@ public class Warrior extends Character{
     public String getName() { return name; }
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		
-    // ~~~~~~~~~~~~~~ ABSTRACT METHODS ~~~~~~~~~~~~~~~~~
+    public static void main(String[] args){
+	//Warrior jello=new Warrior("Jello");
+	//System.out.println(jello.HP);
+    }
+	
+	// ~~~~~~~~~~~~~~ ABSTRACT METHODS ~~~~~~~~~~~~~~~~~
     public void specialize(){
 	defense-=10;
 	attack+=1;	

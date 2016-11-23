@@ -16,7 +16,26 @@ public class Monster extends Character{
 	defense=80;
 	attack=1;
 
-}}
+}
+	// ~~~~~~~~~~~~~~ ABSTRACT METHODS ~~~~~~~~~~~~~~~~~
+    public void specialize(){
+	defense-=10;
+	attack+=1;	
+    }
+	
+	public void normalize(){
+	defense=100;
+	attack=.5;
+    }
+	
+	public String about(){
+	String abt; 
+	abt ="A Monster is a creature that attacks you.";
+	
+	return abt;
+    }
+	
+}
 
 	
 

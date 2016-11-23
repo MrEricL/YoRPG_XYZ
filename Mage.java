@@ -33,4 +33,24 @@ public class Mage extends Character{
     public static void main(String[] args){
 
     }
+	
+	// ~~~~~~~~~~~~~~ ABSTRACT METHODS ~~~~~~~~~~~~~~~~~
+    public void specialize(){
+	defense-=10;
+	attack+=1;	
+    }
+	
+	public void normalize(){
+	defense=100;
+	attack=.5;
+    }
+	
+	public String about(){
+	String abt; 
+	abt ="A mage is a wizard. A magical being. /n";
+	
+	return abt;
+    }
+	
+	
 }

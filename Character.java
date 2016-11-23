@@ -3,7 +3,7 @@
 //HW #32: Ye Olde Role Playing Game, Expanded
 //2016-11-21
 
-public class Character{
+public abstract class Character{
     protected String name;
     protected int HP;
     protected int strength;
@@ -72,27 +72,21 @@ public class Character{
       pre:  defense and attack attributes have been initialized
       post: defense attribute decreases by 10, attack attribute increases by 1.
       =============================================*/
-    public void specialize(){
-	defense-=10;
-	attack+=1;	
-    }
-	
+    public abstract void specialize();
+
 	/*=============================================
       void normalize -- prepare the warrior to perform a normal attack
       pre:  defense and attack attributes have been initialized
       post: resets defense attribute to 100 and attack attribute to 0.5
       =============================================*/
-    public void normalize(){
-	defense=100;
-	attack=.5;
-    }
-    public static String about(){
-	String abt; 
-	abt="A warrior is a physical knight. /n";
-	abt+="A mage is a wizard. A magical being. /n";
-	abt+=" A Rogue is a thief. A steally stabby. /n";
-        abt+="A Monster is a creature that attacks you.";
-	return abt;
-    }
+    public abstract void normalize();
+    public abstract String about();
+	//String abt; 
+	//abt="A warrior is a physical knight. /n";
+	//abt+="A mage is a wizard. A magical being. /n";
+	//abt+=" A Rogue is a thief. A steally stabby. /n";
+    //abt+="A Monster is a creature that attacks you.";
+	//return abt;
+    
 }
 	
