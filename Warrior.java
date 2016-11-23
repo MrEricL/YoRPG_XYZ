@@ -1,7 +1,7 @@
 //Team name: XYZ (Melanie Chow, Eric Li, Iris Tao)
 //APCS1 Period 4
-//HW #32: Ye Olde Role Playing Game, Expanded
-//2016-11-21
+//HW #34: Ye Olde Role Playing Game, Unchained
+//2016-11-23
 
 public class Warrior extends Character{
     //String about="Warrior: Physical knight";
@@ -30,21 +30,5 @@ public class Warrior extends Character{
     public String getName() { return name; }
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		
-    // ~~~~~~~~~~~~~~ ABSTRACT METHODS ~~~~~~~~~~~~~~~~~
-    public void specialize(){
-	defense-=10;
-	attack+=1;	
-    }
-	
-	public void normalize(){
-	defense=100;
-	attack=.5;
-    }
-	
-	public String about(){
-	String abt; 
-	abt ="A warrior is a physical knight. /n";
-	
-	return abt;
-    }
+
 }
