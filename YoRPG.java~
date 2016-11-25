@@ -17,7 +17,7 @@ public class YoRPG
     // ~~~~~~~~~~~ INSTANCE VARIABLES ~~~~~~~~~~~
 
     //change this constant to set number of encounters in a game
-    public final static int MAX_ENCOUNTERS = 5;
+    public final static int MAX_ENCOUNTERS = 15;
 
     //each round, a Warrior and a Monster will be instantiated...
     private Character pat;   //Is it man or woman?
@@ -150,17 +150,13 @@ public class YoRPG
 
 		System.out.println( "\n" + "Ye Olde Monster smacked " +pat.getName() +
 				    " for " + d2 + " points of damage.");
-
-		System.out.println("\n" + pat.getName()+ "'s HP:" + pat.getHP());
-		System.out.println("\n" + pat.getName()+ "'s lives left:" + pat.getLives());
-
 	    }//end while
 
 	    //option 1: you & the monster perish
 	    if ( !smaug.isAlive() && !pat.isAlive() ) {
 		System.out.println( "'Twas an epic battle, to be sure... " + 
 				    "You cut ye olde monster down, but " +
-				    "with its dying breath ye olde monster " +
+				    "with its dying breath ye olde monster. " +
 				    "laid a fatal blow upon thy skull." );
 		return false;
 	    }
@@ -191,7 +187,7 @@ public class YoRPG
 
 	int encounters = 0;
 
-	while( encounters< MAX_ENCOUNTERS ) {
+	while( encounters < MAX_ENCOUNTERS ) {
 	    if ( !game.playTurn() )
 		break;
 	    encounters++;

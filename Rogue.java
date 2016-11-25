@@ -13,10 +13,11 @@ public class Rogue extends Character{
 	// ~~~~~~~~~~ DEFAULT CONSTRUCTOR ~~~~~~~~~~~
     public Rogue(){
 	name="player";
-	HP=50;
+	//HP=100;
 	strength=150;
 	defense=75;
 	attack=1.25;
+	lives=3;
     }
 	
 	// ~~~~~~~~~~ OVERLOADED CONSTRUCTOR ~~~~~~~~~~~

@@ -3,39 +3,35 @@
 //HW #34: Ye Olde Role Playing Game, Unchained
 //2016-11-23
 
-public class Mage extends Character{
-    // String about="Mage: Magic person";
+public class Warrior extends Character{
+    //String about="Warrior: Physical knight";
+	
 	// ~~~~~~~~~~~ INSTANCE VARIABLES ~~~~~~~~~~~
     protected String name;
  
 	
 	// ~~~~~~~~~~ DEFAULT CONSTRUCTOR ~~~~~~~~~~~
-    public Mage(){
-	name="player";
-	//HP=100;
-	strength=200;
-	defense=50;
-	attack=.75;
+    public Warrior(){
 	lives=3;
+	name="player";
+	HP=100;
+	strength=100;
+	defense=40;
+	attack=.5;
     }
 	
-	
 	// ~~~~~~~~~~ OVERLOADED CONSTRUCTOR ~~~~~~~~~~~
-    public Mage(String n){
+    public Warrior(String n){
 	//this() invokes the default constructor to initialize other attributes (HP, strength, etc)
 	this(); 
 	name=n;
-    }			
+    }
 	
 	// ~~~~~~~~~~~~~~ ACCESSORS ~~~~~~~~~~~~~~~~~
     public String getName() { return name; }
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-	
-    public static void main(String[] args){
-
-    }
-	
-	// ~~~~~~~~~~~~~~ ABSTRACT METHODS ~~~~~~~~~~~~~~~~~
+		
+    // ~~~~~~~~~~~~~~ ABSTRACT METHODS ~~~~~~~~~~~~~~~~~
     public void specialize(){
 	defense-=10;
 	attack+=1;	
@@ -48,10 +44,8 @@ public class Mage extends Character{
 	
 	public String about(){
 	String abt; 
-	abt ="A mage is a wizard. A magical being. /n";
+	abt ="A warrior is a physical knight. /n";
 	
 	return abt;
     }
-	
-	
 }

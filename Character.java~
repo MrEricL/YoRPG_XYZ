@@ -4,9 +4,8 @@
 //2016-11-23
 
 public abstract class Character{
-    protected int lives;
     protected String name;
-    protected int HP=100;
+    protected int HP;
     protected int strength;
     protected int defense;
     protected double attack;
@@ -21,50 +20,30 @@ public abstract class Character{
       Returns false it is less or equal to 0 (warrior dies)
       =============================================*/
     public boolean isAlive(){
-	if (HP<=0){
-	    HP=100;
-	    lives-=1;
-	}
-	return lives>0;
+	return HP>0;
     }
-
+	
 	/*=============================================
       int getDefense -- returns value of defense attribute
       pre:  
-      post: Returns the current value of chars's defense attribute
+      post: Returns the current value of warrior's defense attribute
       =============================================*/
     public int getDefense(){
 	return defense;
     }
 
-	/*=============================================
-      String getHP -- returns value of HP attribute
-	  pre:
-      post: return warrior's HP 
-      =============================================*/
-    public int getHP(){
-	return HP;
-    }
  	/*=============================================
       String getName -- returns value of name attribute
 	  pre:
-      post: return chars's name 
+      post: return warrior's name 
       =============================================*/
     public String getName(){
 	return name;
-    }
-	/*=============================================
-      String getLives -- returns value of lives attribute
-	  pre:
-      post: return char's lives 
-      =============================================*/
-    public int getLives(){
-	return lives;
-    }
+    }	
 	/*=============================================
       void lowerHP(int damage) -- takes an int parameter, decreases life attribute by that amount
       pre:  
-      post: chars's HP is decreased by the the amount of damage
+      post: warrior's HP is decreased by the the amount of damage
       =============================================*/
     public void lowerHP(int damage){
 	HP-=damage;

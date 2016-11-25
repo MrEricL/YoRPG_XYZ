@@ -12,7 +12,7 @@ public class Mage extends Character{
 	// ~~~~~~~~~~ DEFAULT CONSTRUCTOR ~~~~~~~~~~~
     public Mage(){
 	name="player";
-	//HP=100;
+	HP=50;
 	strength=200;
 	defense=50;
 	attack=.75;

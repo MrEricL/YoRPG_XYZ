@@ -12,8 +12,9 @@ public class Warrior extends Character{
 	
 	// ~~~~~~~~~~ DEFAULT CONSTRUCTOR ~~~~~~~~~~~
     public Warrior(){
+	lives=3;
 	name="player";
-	HP=100;
+	//HP=100;
 	strength=100;
 	defense=40;
 	attack=.5;
