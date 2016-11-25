@@ -30,5 +30,21 @@ public class Warrior extends Character{
     public String getName() { return name; }
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		
-
+    // ~~~~~~~~~~~~~~ ABSTRACT METHODS ~~~~~~~~~~~~~~~~~
+    public void specialize(){
+	defense-=10;
+	attack+=1;	
+    }
+	
+	public void normalize(){
+	defense=100;
+	attack=.5;
+    }
+	
+	public String about(){
+	String abt; 
+	abt ="A warrior is a physical knight. /n";
+	
+	return abt;
+    }
 }
