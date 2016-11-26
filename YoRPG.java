@@ -123,8 +123,14 @@ public class YoRPG
 	else {
 	    System.out.println( "\nLo, yonder monster approacheth!" );
 
-	    smaug = new Monster();
-
+	    if (Math.random()*100<(5*difficulty)){
+		smaug= new Boss();
+		System.out.println("\n The monster seems to be...  a BOSS!");
+		
+	    }
+	    else{
+		smaug = new Generic();
+	    }
 	    while( smaug.isAlive() && pat.isAlive() ) {
 
 		// Give user the option of using a special attack:
