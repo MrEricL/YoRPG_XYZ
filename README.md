@@ -25,3 +25,10 @@
       -Set character's lives to 3 and HP to 100 (Monsters still have HP of 150)
  
       -In every encounter, # of lives & HP is listed out.
+
+    Eric:
+        
+        - Fixed a lot of the bugs
+        - Fixed the display so it's easier to read
+        - Spawns boss (5% * difficulty level ) times
+        - Added the Boss.java
