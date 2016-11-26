@@ -21,7 +21,7 @@ public class YoRPG
 
     //each round, a Warrior and a Monster will be instantiated...
     private Character pat;   //Is it man or woman?
-    private Monster smaug; //Friendly generic monster name?
+    private Character smaug; //Friendly generic monster name?
 
     private int moveCount;
     private boolean gameOver;
@@ -117,11 +117,12 @@ public class YoRPG
     {
 	int i = 1;
 	int d1, d2;
+	int patLives=pat.getLives();
 
 	if ( Math.random() >= ( difficulty / 3.0 ) )
 	    System.out.println( "\nNothing to see here. Move along!" );
 	else {
-	    System.out.println( "\nLo, yonder monster approacheth!" );
+	    System.out.println( "\n Lo a monster appears!");
 
 	    if (Math.random()*100<(5*difficulty)){
 		smaug= new Boss();
@@ -129,10 +130,20 @@ public class YoRPG
 		
 	    }
 	    else{
-		smaug = new Generic();
+		smaug = new Monster();
 	    }
 	    while( smaug.isAlive() && pat.isAlive() ) {
-
+		System.out.println("\n");
+		System.out.println("__________________________________________");
+		if (patLives> pat.getLives()){
+		    System.out.println("The monster killed you. But your tales does not end just yet, you have "+ pat.getLives() + " lives left");
+		    System.out.println("\n" + pat.getName()+ "'s HP:" + pat.getHP());		    
+		}
+		else{
+		System.out.println("\n" + pat.getName()+ "'s HP:" + pat.getHP());
+		System.out.println( pat.getName()+ "'s lives left:" + pat.getLives());
+		}
+		System.out.println("The foul monster has "+ smaug.getHP()+ "HP left");
 		// Give user the option of using a special attack:
 		// If you land a hit, you incur greater damage,
 		// ...but if you get hit, you take more damage.
@@ -157,8 +168,8 @@ public class YoRPG
 		System.out.println( "\n" + "Ye Olde Monster smacked " +pat.getName() +
 				    " for " + d2 + " points of damage.");
 
-		System.out.println("\n" + pat.getName()+ "'s HP:" + pat.getHP());
-		System.out.println("\n" + pat.getName()+ "'s lives left:" + pat.getLives());
+		//	System.out.println("\n" + pat.getName()+ "'s HP:" + pat.getHP());
+		//	System.out.println("\n" + pat.getName()+ "'s lives left:" + pat.getLives());
 
 	    }//end while
 
@@ -172,7 +183,17 @@ public class YoRPG
 	    }
 	    //option 2: you slay the beast
 	    else if ( !smaug.isAlive() ) {
-		System.out.println( "HuzzaaH! Ye olde monster hath been slain!" );
+		System.out.println("\n");
+		System.out.println("__________________________________________");		
+		if (patLives> pat.getLives()){
+		    System.out.println("The monster killed you. But your tales does not end just yet, "+ pat.getLives() + " lives left");
+		    System.out.println("\n" + pat.getName()+ "'s HP:" + pat.getHP());		    
+		}
+		else{
+		System.out.println("\n" + pat.getName()+ "'s HP:" + pat.getHP());
+		System.out.println( pat.getName()+ "'s lives left:" + pat.getLives());
+		}	    
+		System.out.println( "HuzzaaH! Ye olde monster hath been slain!" );		
 		return true;
 	    }
 	    //option 3: the beast slays you
