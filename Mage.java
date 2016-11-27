@@ -48,7 +48,7 @@ public class Mage extends Character{
 	
 	public String about(){
 	String abt; 
-	abt ="A mage is a wizard. A magical being. /n";
+	abt ="A mage is a wizard. /nYou have fancy magic/nYou have smart tactic/n But be careful not to make yourself tragic/n";
 	
 	return abt;
     }

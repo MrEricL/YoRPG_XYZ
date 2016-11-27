@@ -60,7 +60,7 @@ public class YoRPG
 	String name = "";
 	s = "~~~ Welcome to Ye Olde RPG! ~~~\n";
 
-	s += "\nChoose your difficulty: \n";
+	s += "\nChoose your difficulty: \n" ;
 	s += "\t1: Easy\n";
 	s += "\t2: Not so easy\n";
 	s += "\t3: Beowulf hath nothing on me. Bring it on.\n";
@@ -91,13 +91,15 @@ public class YoRPG
 	    role=Integer.parseInt(in.readLine());
 	    if (role==1){
 		pat= new Warrior (name);
+		System.out.println(pat.about());
 	    }
 	    else if (role==2){
 		pat=new Mage (name);
-		
+		System.out.println(pat.about());
 	    }
 	    else if (role==3){
 		pat= new Rogue (name);
+		System.out.println(pat.about());
 	    }
 	}
 	catch ( IOException e ) { }
@@ -122,11 +124,13 @@ public class YoRPG
 	if ( Math.random() >= ( difficulty / 3.0 ) )
 	    System.out.println( "\nNothing to see here. Move along!" );
 	else {
-	    System.out.println( "\n Lo a monster appears!");
+		String dinosaur = "─────────────────────\n───────────████████──\n──────────███▄███████\n──────────███████████\n──────────███████████\n──────────██████─────\n──────────█████████──\n█───────███████──────\n██────████████████───\n███──██████████──█───\n███████████████──────\n███████████████──────\n─█████████████───────\n──███████████────────\n────████████─────────\n─────███──██─────────\n─────██────█─────────\n─────█─────█─────────\n─────██────██────────\n─────────────────────";
+	    System.out.println( "\n Lo a monster appears!" + dinosaur);
+
 
 	    if (Math.random()*100<(5*difficulty)){
 		smaug= new Boss();
-		System.out.println("\n The monster seems to be...  a BOSS!");
+		System.out.println("\n The monster seems to be...  a BOSS!" );
 		
 	    }
 	    else{
@@ -141,9 +145,16 @@ public class YoRPG
 		}
 		else{
 		System.out.println("\n" + pat.getName()+ "'s HP:" + pat.getHP());
-		System.out.println( pat.getName()+ "'s lives left:" + pat.getLives());
+		
+		String heart = " ";
+		for (int num = 0; num < pat.getLives(); num ++){
+			heart += "♥ ";
+		}
+		
+		System.out.println( pat.getName()+ "'s lives left:" + heart);
 		}
 		System.out.println("The foul monster has "+ smaug.getHP()+ "HP left");
+		System.out.println("__________________________________________");
 		// Give user the option of using a special attack:
 		// If you land a hit, you incur greater damage,
 		// ...but if you get hit, you take more damage.

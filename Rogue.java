@@ -49,7 +49,7 @@ public class Rogue extends Character{
 	
 	public String about(){
 	String abt; 
-	abt ="A warrior is a physical knight. /n";
+	abt ="A rogue is an embezzler\nYou lie and lie\nSo that you don't cry and die.";
 	
 	return abt;
     }
