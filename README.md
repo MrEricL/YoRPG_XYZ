@@ -13,7 +13,8 @@
 
 [ ] New Monsters @MrEricL
 
-[ ] More class related messages (eg. Mage moves ,etc) @Iristao
+[x] More class related messages @Iristao
+[ ] HP related messages @Iristao
 
 #### Edits:
     11/25/2016:
@@ -32,3 +33,10 @@
         - Fixed the display so it's easier to read
         - Spawns boss (5% * difficulty level ) times
         - Added the Boss.java
+        
+    11/27/16
+        - Added ASCII arts for monster and warrior. 
+          (source: https://boldomatic.com/view/post/hGOlEA)
+          (source2:http://textart4u.blogspot.com/2015/08/google-chrome-dinosaur-ascii-text-art.html)
+        - Added heart symbols to represent lives
+        - Edited the about message and enabled it to be displayed after the play selects a role. 
