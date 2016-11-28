@@ -3,8 +3,8 @@ public class Boss extends Character {
     public Boss(){
 	super();
 	about="A super monster!";
-	HP=150*(int)  (Math.random()+1);
-	strength= 150 + (int)(Math.random()* 50);
+	HP=900;
+	strength= 170 + (int)(Math.random()* 50);
 	defense= 100+ (int)(Math.random()*5);
 	lives=3;
 	attack=0.8+(int)(Math.random()*1.4);

@@ -145,14 +145,14 @@ public class YoRPG
 		}
 		else{
 		System.out.println("\n" + pat.getName()+ "'s HP:" + pat.getHP());
-		
+		}
 		String heart = " ";
 		for (int num = 0; num < pat.getLives(); num ++){
 			heart += "♥ ";
 		}
 		
 		System.out.println( pat.getName()+ "'s lives left:" + heart);
-		}
+		
 		System.out.println("The foul monster has "+ smaug.getHP()+ "HP left");
 		System.out.println("__________________________________________");
 		// Give user the option of using a special attack:
@@ -192,6 +192,28 @@ public class YoRPG
 				    "laid a fatal blow upon thy skull." );
 		return false;
 	    }
+	    //option 1.5  bootleg save to functionality
+	    else if (pat.getLives()>0 && pat.getHP()>0 && !smaug.isAlive()){
+		System.out.println("\n");
+		System.out.println("__________________________________________");		
+		if (patLives> pat.getLives()){
+		    System.out.println("The monster killed you. But your tales does not end just yet, "+ pat.getLives() + " lives left");
+		    System.out.println("\n" + pat.getName()+ "'s HP:" + pat.getHP());		    
+		}
+		else{
+		System.out.println("\n" + pat.getName()+ "'s HP:" + pat.getHP());
+		System.out.println( pat.getName()+ "'s lives left:" + pat.getLives());
+		}
+		String heart = " ";
+		for (int num = 0; num < pat.getLives(); num ++){
+			heart += "♥ ";
+		}
+		
+		System.out.println( pat.getName()+ "'s lives left:" + heart);		
+		System.out.println( "HuzzaaH! Ye olde monster hath been slain!" );		
+		return true;		
+
+	    }
 	    //option 2: you slay the beast
 	    else if ( !smaug.isAlive() ) {
 		System.out.println("\n");
@@ -203,7 +225,13 @@ public class YoRPG
 		else{
 		System.out.println("\n" + pat.getName()+ "'s HP:" + pat.getHP());
 		System.out.println( pat.getName()+ "'s lives left:" + pat.getLives());
-		}	    
+		}
+		String heart = " ";
+		for (int num = 0; num < pat.getLives(); num ++){
+			heart += "♥ ";
+		}
+		
+		System.out.println( pat.getName()+ "'s lives left:" + heart);		
 		System.out.println( "HuzzaaH! Ye olde monster hath been slain!" );		
 		return true;
 	    }
