@@ -29,11 +29,12 @@
 
     Eric:
         
-        - Fixed a lot of the bugs
+        - Fixed all of the bugs
         - Fixed the display so it's easier to read
         - Spawns boss (5% * difficulty level ) times
         - Added the Boss.java
-        
+        - Balanced the Boss so it's harder to kill
+        - Fixed a bug with the Boss dealing too little damage
     11/27/16
         - Added ASCII arts for monster and warrior. 
           (source: https://boldomatic.com/view/post/hGOlEA)
