@@ -43,7 +43,7 @@ public class Warrior extends Character{
     }
 	
 	public String about(){
-	String abt ="\n\n\n\n\n\n====================\nA warrior is a physical knight \nOn the sword you shed lights\nYou fight until you die.  \n====================\n\n";
+	String abt ="\n\n\n\n=======NEW GAME=======\n\nA warrior is a physical knight \nOn the sword you shed lights\nYou fight until you die.  \n====================\n\n";
 	
 	String war ="xxxx[{::::::::::::::::::::>\n\nxxxx[{::::::::::::::::::::>\n\nxxxx[{::::::::::::::::::::>\n ";
     abt += war;

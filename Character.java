@@ -21,7 +21,7 @@ public abstract class Character{
       Returns false it is less or equal to 0 (warrior dies)
       =============================================*/
     public boolean isAlive(){
-	if (HP<=0 && lives>0){
+	if (HP<=0 && lives>1){
 	    HP=100;
 	    lives-=1;
 	    return true;
